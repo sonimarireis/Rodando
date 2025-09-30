@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- outras metas, título etc -->
+
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+
+    <title> Mercados </title>
+
+</head>
+
+<body>
+
+    <a href="index.html"></a>
+
+    <!-- Script de acessibilidade (Zoom) -->
+    <style>
+        body {
+            font-size: 16px;
+            /* tamanho inicial */
+        }
+
+        .botoes {
+            margin: 20px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 0 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+    <header>
+        <div class="header-container">
+            <div class="coluna">
+                <img src="../IMG/logo.png" height="300px" width="300px" alt="foto_logo">
+            </div>
+        </div>
+
+        <div id="acessibilidade">
+            <button class="btn btn-primary" id="diminuir" aria-label="Diminuir fonte">A-</button>
+            <button class="btn btn-primary" id="aumentar" aria-label="Aumentar fonte">A+</button>
+        </div>
+
+        <!-- VLibras -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+    </header>
+
+    <!-- Navegação -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Alimentação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hotéis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Lojas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Mercados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Praças</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inspiração</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex ms-4">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <main>
+        <!-- Parte Um - Fundo imagem e centralização -->
+        <div class="parte-um">
+            <div class="conteudo-central">
+            </div>
+        </div>
+
+        <div class="card-main">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-img-top">
+                    <img src="../IMG/alimentação/le_chef.png" alt="Logo do restaurante Le Chef">
+                </div>
+
+                <div class="card-body">
+                    <h2 class="card-titulo"> Le Chef </h2>
+                    <p class="card-descricao">
+                    <div class="card-main">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top">
+                                <img src="../IMG/Mercado/anuar.webp" alt="Foto fachada do mercado com promoções">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo"> Anuar Pezzi Supermercados </h2>
+                                <p class="card-descricao">
+                                    Acessibilidade.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Rua - Av. Dr. Carlos Barbosa, 1311 - Medianeira, Porto Alegre - RS, 90880-001.<br>
+                                    Fecha em breve ⋅ 22:00 ⋅ Abre ter. às 07:00.<br>
+                                    superanuarpezzi.com.br
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top">
+                                <img src="../IMG/alimentação/solar.jpeg" alt="Logo do restaurante E pizzaria Solar">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo"> Solar </h2>
+                                <p class="cad-descricao">
+                                    Acessibilidade<br>
+                                    Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Estacionamento com acessibilidade para pessoas em cadeira de rodas<br>
+                                    Estr. João Antônio da Silveira, 239 - Restinga, Porto Alegre - RS, 91790-619
+                                    Fechado ⋅ Abre às 11:30
+                                    R$ 40–60 por pessoa
+                                    Contato:
+                                    (51) 3241-0690
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+                                <img src="../IMG/alimentação/gambrinus.jpg" alt="Salão principal com as mesas">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo"> Gambrinus</h2>
+                                <p class="card-descricao">
+                                    Acessibilidade<br>
+                                    Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    85 Galeria, Andar: G Mercado Público - Centro Histórico, Porto Alegre - RS,
+                                    90020-070
+                                    Fechado ⋅ Abre às 11:00
+                                    Cardápio
+                                    ifood.com.br
+                                    gambrinus.com.br
+                                    Contato:
+                                    (51) "3226-6914"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+                                <img src="../IMG/alimentação/boteco_pinguim.jpeg" alt="fachada do Boteco do Pinguim">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo">Boteco do Pinguim</h2>
+                                <p class="card-descricao">
+                                    Acessibilidade<br>
+                                    Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Estacionamento com acessilidade para pessoas em cadeira de rodas<br>
+                                    Av. Assis Brasil, 4111 - São Sebastião, Porto Alegre - RS, 91110-001
+                                    Fechado ⋅ Abre às 17:00
+                                    R$ 60–80 por pessoa
+                                    Cardápio
+                                    botecopinguim.com.br
+                                    Contato:
+                                    (51) "3029-7039"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+                                <img src="../IMG/alimentação/pinguim.webp" alt="fachada do Bar do Pinguim">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo">Bar do Pinguim </h2>
+                                <p class="card-descricao">"Acessibilidade<br>
+                                    Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Estacionamento <strong> sem </strong> acessibilidade para pessoas em cadeira de
+                                    rodas<br>
+                                    R. Gen. Lima e Silva, 505/507 - Cidade Baixa, Porto Alegre - RS, 90050-100
+                                    Fechado ⋅ Abre às 14:00
+                                    Contato:
+                                    (51) "3012-5836"
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+                                <img src="../IMG/alimentação/Boteco_Pedrini.webp"
+                                    alt="Parte de dentro com a estrutura do local">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo"> Boteco_Pedrini </h2>
+                                <p class="card-descricao">
+                                    Acessibilidade<br>
+                                    Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Estacionamento <strong> sem </strong> acessibilidade para pessoas em cadeira de
+                                    rodas<br>
+                                    Bar gastronômico descontraído com menu de aperitivos, incluindo pratos sofisticados
+                                    de grelhados com acompanhamentos.<br>
+                                    Endereço: Av. Venâncio Aires, 204 - Cidade Baixa, Porto Alegre - RS, 90040-191<br>
+                                    Horário de funcionamento:
+                                    Fechado ⋅ Abre às 11:00<br>
+                                    Contato:
+                                    Telefone:(51)"3029-0919"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+                                <img src="../IMG/alimentação/grelhatus.jpg" alt="foto da fachada do restaurante">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo"> Grelhatus </h2>
+                                <p class="descricao">Acessibilidade<br>
+                                    Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Estacionamento com acessibilidade para pessoas em cadeira de rodas<br>
+                                    Restaurante familiar simples com buffet no almoço e grelhados diversos à vontade no
+                                    jantar.<br>
+                                    R. Vicente da Fontoura, 1600 - Rio Branco, Porto Alegre - RS, 90640-002
+                                    Fecha em breve ⋅ 14:45 ⋅ Abre ter. às 11:00
+                                    R$ 20–40 por pessoa
+                                    grelhatus.com.br
+                                    Contato:
+                                    (51) "3217-6644"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top">
+                                <img src="../IMG/alimentação/marques.png" alt="foto da logo do restaurante">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo"> Marquês Empório Parrilha </h2>
+                                <p class="card-descricao">
+                                    Acessibilidade<br>
+                                    Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Estacionamento com acessibilidade para pessoas em cadeira de rodas<br>
+                                    Ampla churrascaria de carnes nobres em ambiente familiar e informal.
+                                    Av. Carlos Gomes, 1249 - Petrópolis, Porto Alegre - RS, 90480-004<br>
+                                    Aberto ⋅ Fecha às 23:00<br>
+                                    Outros horários<br>
+                                    Encontrar mesa
+                                    whatsapp.com
+                                    Cardápio
+                                    linktr.ee
+                                    Contato:
+                                    (51) "3276-2090"
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+                                <img src="../IMG/alimentação/lunar.jpg" alt="Foto da fachada do restaurante">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo"> Lunar Gastronomia</h2>
+                                <p class="card-descricao">
+                                    Acessibilidade<br>
+                                    Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Buffet grande e elegante para toda a família com culinária brasileira gourmet
+                                    contemporânea e sobremesa.<br>
+                                    Av. Assis Brasil, 1214 - Passo d'Areia, Porto Alegre - RS, 91010-001<br>
+                                    Fechado ⋅ Abre às 18:30<br>
+                                    R$ 80–100 por pessoa<br>
+                                    Contato:
+                                    (51) "3377-9339"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+                                <img src="../IMG/alimentação/divino.jpg" alt="foto da fachada do restaurante">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo"> Divino Sabor </h2>
+                                <p class="card-descricao">
+                                    Acessibilidade<br>
+                                    Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Av. Otto Niemeyer, 2364 - Tristeza, Porto Alegre - RS, 91910-001
+                                    Fechado ⋅ Abre ter. às 11:00
+                                    R$ 40–60 por pessoa
+                                    Cardápio
+                                    app.anota.ai<br>
+                                    Contato:
+                                    (51) 3024-2364<br>
+                                    Self-service amplo e despojado que serve pratos caseiros variados e seletos com mesa
+                                    farta de sobremesas.<br>
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+                                <img src="../IMG/alimentação/sushi.png" alt="fotod alogo do restaurante">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo"> Shark Sushi</h2>
+                                <p class="card-descricao">
+                                    Acessibilidade.<br>
+                                    Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Av. Ipiranga, 4612 - Jardim Botânico, Porto Alegre - RS, 90610-372<br>
+                                    Fechado ⋅ Abre às 18:30
+                                    Cardápio
+                                    app.sharksushi.com.br
+                                    sharksushi.com.br
+                                    Contato:
+                                    (51)"2103-9573"
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+                                <img src="../IMG/alimentação/ferreros.png" alt="foto da logo do restaurante">
+                            </div>
+
+                            <div class="card-body">
+                                <h2 class="card-titulo"> Los Ferreos 511 bar e parrilha </h2>
+                                <p class="card-descricao">
+                                    Acessibilidade<br>
+                                    Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                                    Av. Ecoville, 511 - Sarandi, Porto Alegre - RS, 91150-400<br>
+                                    Fechado ⋅ Abre ter. às 17:00<br>
+                                    Cardápio
+                                    losferreros.menudino.com<br>
+                                    Contato:
+                                    (51)"3209-7942"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    </main>
+    </p>
+    </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top">
+            <img src="../IMG/alimentação/solar.jpeg" alt="Logo do restaurante E pizzaria Solar">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo"> Solar </h2>
+            <p class="cad-descricao">
+                Acessibilidade<br>
+                Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                Estacionamento com acessibilidade para pessoas em cadeira de rodas<br>
+                Estr. João Antônio da Silveira, 239 - Restinga, Porto Alegre - RS, 91790-619
+                Fechado ⋅ Abre às 11:30
+                R$ 40–60 por pessoa
+                Contato:
+                (51) 3241-0690
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+            <img src="../IMG/alimentação/gambrinus.jpg" alt="Salão principal com as mesas">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo"> Gambrinus</h2>
+            <p class="card-descricao">
+                Acessibilidade<br>
+                Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                85 Galeria, Andar: G Mercado Público - Centro Histórico, Porto Alegre - RS, 90020-070
+                Fechado ⋅ Abre às 11:00
+                Cardápio
+                ifood.com.br
+                gambrinus.com.br
+                Contato:
+                (51) "3226-6914"
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+            <img src="../IMG/alimentação/boteco_pinguim.jpeg" alt="fachada do Boteco do Pinguim">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo">Boteco do Pinguim</h2>
+            <p class="card-descricao">
+                Acessibilidade<br>
+                Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                Estacionamento com acessilidade para pessoas em cadeira de rodas<br>
+                Av. Assis Brasil, 4111 - São Sebastião, Porto Alegre - RS, 91110-001
+                Fechado ⋅ Abre às 17:00
+                R$ 60–80 por pessoa
+                Cardápio
+                botecopinguim.com.br
+                Contato:
+                (51) "3029-7039"
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+            <img src="../IMG/alimentação/pinguim.webp" alt="fachada do Bar do Pinguim">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo">Bar do Pinguim </h2>
+            <p class="card-descricao">"Acessibilidade<br>
+                Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                Estacionamento <strong> sem </strong> acessibilidade para pessoas em cadeira de rodas<br>
+                R. Gen. Lima e Silva, 505/507 - Cidade Baixa, Porto Alegre - RS, 90050-100
+                Fechado ⋅ Abre às 14:00
+                Contato:
+                (51) "3012-5836"
+            </p>
+        </div>
+    </div>
+
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+            <img src="../IMG/alimentação/Boteco_Pedrini.webp" alt="Parte de dentro com a estrutura do local">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo"> Boteco_Pedrini </h2>
+            <p class="card-descricao">
+                Acessibilidade<br>
+                Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                Estacionamento <strong> sem </strong> acessibilidade para pessoas em cadeira de rodas<br>
+                Bar gastronômico descontraído com menu de aperitivos, incluindo pratos sofisticados de grelhados com
+                acompanhamentos.<br>
+                Endereço: Av. Venâncio Aires, 204 - Cidade Baixa, Porto Alegre - RS, 90040-191<br>
+                Horário de funcionamento:
+                Fechado ⋅ Abre às 11:00<br>
+                Contato:
+                Telefone:(51)"3029-0919"
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+            <img src="../IMG/alimentação/grelhatus.jpg" alt="foto da fachada do restaurante">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo"> Grelhatus </h2>
+            <p class="descricao">Acessibilidade<br>
+                Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                Estacionamento com acessibilidade para pessoas em cadeira de rodas<br>
+                Restaurante familiar simples com buffet no almoço e grelhados diversos à vontade no jantar.<br>
+                R. Vicente da Fontoura, 1600 - Rio Branco, Porto Alegre - RS, 90640-002
+                Fecha em breve ⋅ 14:45 ⋅ Abre ter. às 11:00
+                R$ 20–40 por pessoa
+                grelhatus.com.br
+                Contato:
+                (51) "3217-6644"
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top">
+            <img src="../IMG/alimentação/marques.png" alt="foto da logo do restaurante">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo"> Marquês Empório Parrilha </h2>
+            <p class="card-descricao">
+                Acessibilidade<br>
+                Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                Estacionamento com acessibilidade para pessoas em cadeira de rodas<br>
+                Ampla churrascaria de carnes nobres em ambiente familiar e informal.
+                Av. Carlos Gomes, 1249 - Petrópolis, Porto Alegre - RS, 90480-004<br>
+                Aberto ⋅ Fecha às 23:00<br>
+                Outros horários<br>
+                Encontrar mesa
+                whatsapp.com
+                Cardápio
+                linktr.ee
+                Contato:
+                (51) "3276-2090"
+            </p>
+        </div>
+    </div>
+
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+            <img src="../IMG/alimentação/lunar.jpg" alt="Foto da fachada do restaurante">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo"> Lunar Gastronomia</h2>
+            <p class="card-descricao">
+                Acessibilidade<br>
+                Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Buffet grande e elegante para toda a família com culinária brasileira gourmet contemporânea e
+                sobremesa.<br>
+                Av. Assis Brasil, 1214 - Passo d'Areia, Porto Alegre - RS, 91010-001<br>
+                Fechado ⋅ Abre às 18:30<br>
+                R$ 80–100 por pessoa<br>
+                Contato:
+                (51) "3377-9339"
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+            <img src="../IMG/alimentação/divino.jpg" alt="foto da fachada do restaurante">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo"> Divino Sabor </h2>
+            <p class="card-descricao">
+                Acessibilidade<br>
+                Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Av. Otto Niemeyer, 2364 - Tristeza, Porto Alegre - RS, 91910-001
+                Fechado ⋅ Abre ter. às 11:00
+                R$ 40–60 por pessoa
+                Cardápio
+                app.anota.ai<br>
+                Contato:
+                (51) 3024-2364<br>
+                Self-service amplo e despojado que serve pratos caseiros variados e seletos com mesa farta de
+                sobremesas.<br>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+            <img src="../IMG/alimentação/sushi.png" alt="fotod alogo do restaurante">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo"> Shark Sushi</h2>
+            <p class="card-descricao">
+                Acessibilidade.<br>
+                Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Av. Ipiranga, 4612 - Jardim Botânico, Porto Alegre - RS, 90610-372<br>
+                Fechado ⋅ Abre às 18:30
+                Cardápio
+                app.sharksushi.com.br
+                sharksushi.com.br
+                Contato:
+                (51)"2103-9573"
+                <br>
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+            <img src="../IMG/alimentação/ferreros.png" alt="foto da logo do restaurante">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-titulo"> Los Ferreos 511 bar e parrilha </h2>
+            <p class="card-descricao">
+                Acessibilidade<br>
+                Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+                Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+                Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+                Av. Ecoville, 511 - Sarandi, Porto Alegre - RS, 91150-400<br>
+                Fechado ⋅ Abre ter. às 17:00<br>
+                Cardápio
+                losferreros.menudino.com<br>
+                Contato:
+                (51)"3209-7942"
+            </p>
+        </div>
+    </div>
+    </div>
+    </main>
+
+</body>
+
+<!-- Rodapé -->
+<footer>
+    <div class="footer-container">
+
+        <!-- BLOCO 1 - MAPS -->
+        <div class="map">
+            <h5> Localização </h5>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.79161441889!2d-51.2188929!3d-30.0428357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1755805781151!5m2!1spt-BR!2sbr"
+                width="500px" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+
+        <!-- BLOCO 2 - EMAIL/GITHUB -->
+        <div class="footer-links">
+            <h5> Contatos </h5>
+            <br>
+            <br>
+            <br>
+
+            <a href="mailto:sonimaridosreis@gmail.com">
+                <img src="../IMG/emailpreto.png" width="40px" height="40px" alt="email"> Sonimaridosreis@gmail.com</a>
+
+            <a href="https://github.com/sonimari" target="_blank">
+                <img src="../IMG/github.png" width="40px" height="40px"> GitHub Sonimári</a>
+
+            <a href="https://www.linkedin.com/in/sonim%C3%A1ri-reis-20aa1a326" target="_blank">
+                <img src="../IMG/linkedinpreto.png" width="40px" height="40px"> Sonimári Souza Dos Reis </a>
+        </div>
+
+        <!-- BLOCO 3 - COPYRIGHT -->
+        <div class="copy">
+            <h5>Obrigado por ter visitado o nosso site ♡</h5>
+            <br>
+            <br>
+            <br>
+
+            <div class="copy-marcas">
+                <img src="../IMG/Senac.png">
+                <img src="../IMG/Sucesu.png">
+                <br>
+                <br>
+                <br>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>Copyright ©2025 | Todos os direitos reservados.</p>
+        </div>
+</footer>
+
+
+
+<script src="../JS/acessibilidade.js">
+
+</script>
+
+</html>

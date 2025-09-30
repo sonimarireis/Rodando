@@ -1,0 +1,405 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  background-color: rgb(215, 201, 255);
+
+}
+
+header {
+  width: 100%;
+  height: 250px;
+  background-color: #001f4d;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* garante que tudo fique centralizado */
+  position: relative;
+  /* referência para o absolute */
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* centraliza horizontalmente */
+  text-align: center;
+  font-size: 24px;
+  /* opcional */
+  font-weight: bold;
+}
+
+/* Acessibilidade (direita) */
+#acessibilidade {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translatey(-50%);
+  display: flex;
+  gap: 20px;
+  /* espaço entre os botões */
+  align-items: center;
+  /* alinha verticalmente */
+}
+
+#acessibilidade .btn {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Navegação */
+nav {
+  display: block;
+  background-color: #0c9fb9;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Color letras */
+#navbarSupportedContent .navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Color letras hover */
+#navbarSupportedContent .navbar-nav .nav-link:hover {
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+/* Botão de pesquisa */
+#navbarSupportedContent .btn {
+  background-color: #3ac9d3;
+  /* cor de fundo normal */
+  color: #fff;
+  /* texto branco */
+  border: none;
+  /* sem borda */
+  border-radius: 5px;
+  /* cantos arredondados (opcional) */
+  padding: 6px 16px;
+  /* tamanho interno */
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* hover no botão de pesquisa */
+#navbarSupportedContent .btn:hover {
+  background-color: #0d6efd;
+
+  /* cor ao passar o mouse */
+  color: #fff;
+}
+
+/* Botão hamburguer branco */
+.navbar-toggler {
+  border: #ffffff;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Faz o menu abrir sobre o conteúdo */
+.navbar-collapse {
+  background-color: #4cacc9;
+  /* mesma cor do nav */
+  padding: 10px;
+  position: absolute;
+  top: 100%;
+  /* logo abaixo da barra */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* fica acima do main */
+}
+
+/* Remove o contorno e sombra padrão ao focar no botão do menu */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;
+  /* remove contorno */
+  box-shadow: none !important;
+  /* remove glow branco/preto */
+  border-color: #fff !important;
+  /* mantém a borda branca */
+}
+
+/* Parte Um - Fundo imagem e centralização */
+.parte-um {
+  min-height: 100vh;
+  /* altura mínima = tela inteira */
+  width: 100%;
+  background: url('../IMG/acessivel.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Botão vamos rodar por aí*/
+.btn-central {
+  padding: 12px 25px;
+  background-color: #43738ab6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+/* Faz o botão mudar de cor suavemente */
+.btn-central:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* Parte Dois - Fundo branco */
+.parte-dois {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.nossa-historia h2 {
+  font-weight: bold;
+}
+
+.nossa-historia .nossa {
+  color: #307ca0;
+  font-size: 35px;
+}
+
+.nossa-historia .texto {
+  margin-top: 50px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Estilizando a lista dentro do texto */
+.nossa-historia .texto ul {
+  margin: 20px auto;
+  padding-left: 0;
+  list-style: circle;
+  text-align: left;
+  /* alinhamento mais natural */
+  max-width: 600px;
+  /* mantém a lista centralizada */
+}
+
+.frase-botao .frase p {
+  color: #320699;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Marcador personalizado */
+.nossa-historia .texto ul li::before {
+  position: absolute;
+  left: 0;
+  color: #307ca0;
+  /* cor azul do título */
+  font-weight: bold;
+}
+
+/* Esconde o hamburguer em telas grandes */
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+ /* RODAPÉ */
+
+footer {
+  background: #001f4d;   /* fundo azul escuro */
+  color: #fff;           /* todas as letras brancas */
+  padding: 50px 50px;
+}
+
+.footer-container {
+  display: flex;              /* deixa os blocos lado a lado */
+  justify-content: space-between; /* distribui igualmente */
+  align-items: flex-start;    /* todos alinhados no topo */
+  gap: 30px;                  /* espaço entre blocos */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* ===== BLOCO MAP ===== */
+.map h5 {
+  margin-bottom: 10px;
+   color: #d78fea;
+}
+
+/* ===== BLOCO LINKS ===== */
+
+
+.footer-links h5 {
+  margin-bottom: 15px;
+  color: #d78fea;
+}
+
+.footer-links a {
+  display: flex;             /* deixa o ícone + texto lado a lado */
+  align-items: center;       /* alinha no meio vertical */
+  margin: 10px 0;
+  color: #fff;               /* texto branco */
+  text-decoration: none;
+}
+
+.footer-links img {
+  margin-right: 10px;        /* distância entre ícone e texto */
+  filter: brightness(0) invert(1); /* deixa ícone branco */
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.footer-links img:hover {
+  transform: scale(1.1);
+  /* filtro aproximado para #3ac9d3 */
+  filter: brightness(0) saturate(100%) invert(83%) sepia(13%) saturate(1941%) hue-rotate(150deg) brightness(92%) contrast(94%);
+}
+
+
+.footer-links a:hover{
+  color: #d3d3d3;
+}
+/* ===== BLOCO COPYRIGHT ===== */
+.copy {
+  text-align: center;   /* centraliza */
+}
+
+.copy h5 {
+  margin-bottom: 10px;  /* separa agradecimento do copy */
+   color: #d78fea;
+}
+
+.copy p {
+  font-weight: bold;
+  color:white;
+  font-size: 14px;
+  opacity: 0.8;        /* deixa mais suave */
+}
+
+
+.copy .copy-marcas {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 35px; /* espaço entre as imagens */
+}
+
+.copy .copy-marcas img {
+  width: 110px;
+  height: auto;
+}
+
+/* Esconde o hamburguer em telas grandes */
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-collapse {
+    position: static;  /* mantém os itens inline */
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+/* Faz o menu abrir bonito no mobile */
+@media (max-width: 480px) {
+  
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;   
+    left: 0;
+    width: 100%;
+    background-color: #001f4d;
+    padding: 30px;
+    z-index: 1000;
+  }
+
+  #navbarSupportedContent .navbar-nav {
+    align-items: center;  /* centraliza links */
+    gap: 10px;
+  }
+
+#navbarSupportedContent .d-flex {
+    margin-top: 20px; /* afasta os links do input/botão */
+    width: 100%;
+    display: flex;
+    gap: 10px; /* separa input e botão */
+}
+
+  #navbarSupportedContent .form-control,
+  #navbarSupportedContent .btn {
+    width: 100%; /* input e botão ocupam largura inteira */
+    margin-top: 10px;
+  }
+
+   .footer-container {
+    display: flex;
+    flex-direction: column;   /* empilha os blocos */
+    align-items: center;      /* centraliza */
+    gap: 60px;                /* espaço entre os blocos */
+    text-align: center;       /* centraliza textos */
+  }
+
+  /* Map responsivo */
+  .footer-container .map iframe{
+    width: 100% !important;
+    max-width: 420px;
+    height: 200px;
+    padding-top: 10px;
+        
+  }
+
+  /* Links centralizados */
+  .footer-links {
+    width: 100%;
+  }
+
+  .footer-links a {
+    justify-content: center;
+  }
+
+  /* Copyright responsivo */
+  .copy .copy-marcas {
+    justify-content: center;
+  }
+
+  .copy p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 991px) {
+  header,
+  nav,
+  main,
+  section,
+  article,
+  aside,
+  footer {
+    display: flex;
+    flex-direction: column; /* empilha em coluna */
+    align-items: center;    /* centraliza conteúdo */
+    width: 100%;            /* ocupa largura toda */
+  }
+}
+
