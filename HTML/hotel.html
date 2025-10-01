@@ -2,433 +2,431 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" lang="pt-br">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+  <meta charset="UTF-8" lang="pt-br">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
 
-    <title> Hotéis </title>
+  <title> Hotéis </title>
 </head>
 
 <body>
 
-    <a href="index.html"></a>
+  <a href="index.html"></a>
 
-    <!-- Script de acessibilidade (Zoom) -->
-    <style>
-        body {
-            font-size: 16px;
-            /* tamanho inicial */
-        }
+  <!-- Script de acessibilidade (Zoom) -->
+  <style>
+    body {
+      font-size: 16px;
+      /* tamanho inicial */
+    }
 
-        .botoes {
-            margin: 20px;
-        }
+    .botoes {
+      margin: 20px;
+    }
 
-        button {
-            padding: 8px 12px;
-            margin: 0 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    button {
+      padding: 8px 12px;
+      margin: 0 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 
-    <header>
-        <div class="header-container">
-            <div class="coluna">
-                <img src="../IMG/logo.png" height="300px" width="300px" alt="foto_logo">
-            </div>
+  <header>
+    <div class="header-container">
+      <div class="coluna">
+        <img src="../IMG/logo.png" height="300px" width="300px" alt="foto_logo">
+      </div>
+    </div>
+
+    <div id="acessibilidade">
+      <button class="btn btn-primary" id="diminuir" aria-label="Diminuir fonte">A-</button>
+      <button class="btn btn-primary" id="aumentar" aria-label="Aumentar fonte">A+</button>
+    </div>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+  </header>
+
+  <!-- Navegação -->
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="alimentacao.html">Alimentação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hotel.html">Hotéis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shopping.html">Shopping</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mercado.html">Mercados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="praca.html">Praças</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="inspiracao.html">Inspiração</a>
+          </li>
+
+        </ul>
+        <form class="d-flex ms-4">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <main>
+    <div class="parte-um">
+      <div class="conteudo-central">
+      </div>
+    </div>
+
+    <div class="main-titulo"><br>
+
+      <h2> Aqui alguns Hotéis com acessibilidade garantida! </h2><br>
+
+    </div>
+
+    <!-- CARDS restaurantes-->
+    <div class="card-main">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top">
+          <img src="../IMG/hotel/ibis.jpg" alt="Fachada do hotel">
         </div>
 
-        <div id="acessibilidade">
-            <button class="btn btn-primary" id="diminuir" aria-label="Diminuir fonte">A-</button>
-            <button class="btn btn-primary" id="aumentar" aria-label="Aumentar fonte">A+</button>
+        <div class="card-body">
+          <h2 class="card-titulo"> Ibis Assis Brasil </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Orientação auditiva.<br>
+            Recursos visuais: sinais tácteis.<br>
+            Recursos visuais: braile.<br>
+            Cordão de emergência no banheiro.<br>
+            Pia do banheiro mais baixa.<br>
+            Vaso sanitário com barras de apoio.<br>
+            Acessível para cadeiras de rodas.<br>
+            Avenida Assis Brasil, 9300, Porto Alegre, CEP 91140-000, Brasil.<br>
+            Após fazer uma reserva, todas as
+            informações sobre a propriedade, incluindo telefone e e-mail, constarão tanto na confirmação
+            como em sua conta.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top">
+          <img src="../IMG/hotel/moov.jpg" alt="Foto da fachada do Hotél">
         </div>
 
-        <!-- VLibras -->
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
+        <div class="card-body">
+          <h2 class="card-titulo"> Moov </h2>
+          <p class="cad-descricao">
+            Acessibilidade.<br>
+            Orientação auditiva.<br>
+            Recursos visuais: sinais tácteis.<br>
+            Recursos visuais: braile.<br>
+            Cordão de emergência no banheiro.<br>
+            Pia do banheiro mais baixa.<br>
+            Vaso sanitário elevado.<br>
+            Vaso sanitário com barras de apoio.<br>
+            Acessível para cadeiras de rodas.<br>
+            Andares superiores acessíveis por elevador.<br>
+            Rua Benjamin Constant 1891 Bairro São Geraldo, Porto Alegre, CEP 90055-055, Brasil.<br>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/hotel/nacional.jpg" alt="Mostra o letreiro do nome do hotel em uma parede">
         </div>
 
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
+        <div class="card-body">
+          <h2 class="card-titulo"> Nacional Inn Porto Alegre</h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Recursos visuais: sinais tácteis.<br>
+            Recursos visuais: braile.<br>
+            Pia do banheiro mais baixa.<br>
+            Vaso sanitário com barras de apoio.<br>
+            Acessível para cadeiras de rodas.<br>
+            A unidade é totalmente acessível para cadeira de rodas.<br>
+            Andares superiores acessíveis por elevador.<br>
+            Av. Otávio Rocha, 280 – Centro Histórico de Porto Alegre, Centro de Porto Alegre, Porto Alegre,
+            CEP 90020-180, BrasilApós fazer uma reserva, todas as informações sobre a propriedade, incluindo
+            telefone e e-mail, constarão tanto na confirmação como em sua conta.
 
-    </header>
-
-    <!-- Navegação -->
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="alimentacao.html">Alimentação</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="hotel.html">Hotéis</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shopping.html">Shopping</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mercado.html">Mercados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="praca.html">Praças</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="inspiracao.html">Inspiração</a>
-                    </li>
-
-                </ul>
-                <form class="d-flex ms-4">
-                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
-                </form>
-            </div>
+          </p>
         </div>
-    </nav>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <main>
-        <div class="parte-um">
-            <div class="conteudo-central">
-            </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/hotel/letto.jpg" alt="mostra antesala com duas poltronas">
         </div>
 
-        <div class="main-titulo"><br>
+        <div class="card-body">
+          <h2 class="card-titulo"> Letto Hotel Porto Alegre </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            A unidade é totalmente acessível para cadeira de rodas.<br>
+            Andares superiores acessíveis por elevador.<br>
+            Rua Duque de Caxias, 1454, Centro de Porto Alegre, CEP 90010-281, Brasil.<br>
+            Após fazer uma reserva, todas as informações sobre a propriedade, incluindo telefone e e-mail,
+            constarão
+            tanto na confirmação como em sua conta.
 
-            <h2> Aqui alguns Hotéis com acessibilidade garantida! </h2><br>
+          </p>
+        </div>
+      </div>
 
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/hotel/ritter.jpg" alt="fachada do Hotel">
         </div>
 
-        <!-- CARDS restaurantes-->
-        <div class="card-main">
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top">
-                    <img src="../IMG/hotel/ibis.jpg" alt="Fachada do hotel">
-                </div>
+        <div class="card-body">
+          <h2 class="card-titulo">Ritter Hotel </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Pia do banheiro mais baixa.<br>
+            Vaso sanitário com barras de apoio.<br>
+            Acessível para cadeiras de rodas.<br>
+            Andares superiores acessíveis por elevador.<br>
+            Largo Vespasiano Julio Veppo, 55, Porto Alegre, CEP 90035-040, Brasil.<br>
+            Após fazer uma reserva,
+            todas as informações sobre a propriedade, incluindo telefone e e-mail, constarão tanto na
+            confirmação como em sua conta.
 
-                <div class="card-body">
-                    <h2 class="card-titulo"> Ibis Assis Brasil </h2>
-                    <p class="card-descricao">
-                        Acessibilidade.<br>
-                        Orientação auditiva.<br>
-                        Recursos visuais: sinais tácteis.<br>
-                        Recursos visuais: braile.<br>
-                        Cordão de emergência no banheiro.<br>
-                        Pia do banheiro mais baixa.<br>
-                        Vaso sanitário com barras de apoio.<br>
-                        Acessível para cadeiras de rodas.<br>
-                        Avenida Assis Brasil, 9300, Porto Alegre, CEP 91140-000, Brasil.<br>
-                        Após fazer uma reserva, todas as
-                        informações sobre a propriedade, incluindo telefone e e-mail, constarão tanto na confirmação
-                        como em sua conta.
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top">
-                    <img src="../IMG/hotel/moov.jpg" alt="Foto da fachada do Hotél">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo"> Moov </h2>
-                    <p class="cad-descricao">
-                        Acessibilidade.<br>
-                        Orientação auditiva.<br>
-                        Recursos visuais: sinais tácteis.<br>
-                        Recursos visuais: braile.<br>
-                        Cordão de emergência no banheiro.<br>
-                        Pia do banheiro mais baixa.<br>
-                        Vaso sanitário elevado.<br>
-                        Vaso sanitário com barras de apoio.<br>
-                        Acessível para cadeiras de rodas.<br>
-                        Andares superiores acessíveis por elevador.<br>
-                        Rua Benjamin Constant 1891 Bairro São Geraldo, Porto Alegre, CEP 90055-055, Brasil.<br>
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
-                    <img src="../IMG/hotel/nacional.jpg" alt="Mostra o letreiro do nome do hotel em uma parede">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo"> Nacional Inn Porto Alegre</h2>
-                    <p class="card-descricao">
-                        Acessibilidade.<br>
-                        Recursos visuais: sinais tácteis.<br>
-                        Recursos visuais: braile.<br>
-                        Pia do banheiro mais baixa.<br>
-                        Vaso sanitário com barras de apoio.<br>
-                        Acessível para cadeiras de rodas.<br>
-                        A unidade é totalmente acessível para cadeira de rodas.<br>
-                        Andares superiores acessíveis por elevador.<br>
-                        Av. Otávio Rocha, 280 – Centro Histórico de Porto Alegre, Centro de Porto Alegre, Porto Alegre,
-                        CEP 90020-180, BrasilApós fazer uma reserva, todas as informações sobre a propriedade, incluindo
-                        telefone e e-mail, constarão tanto na confirmação como em sua conta.
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
-                    <img src="../IMG/hotel/letto.jpg" alt="mostra antesala com duas poltronas">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo"> Letto Hotel Porto Alegre </h2>
-                    <p class="card-descricao">
-                        Acessibilidade.<br>
-                        A unidade é totalmente acessível para cadeira de rodas.<br>
-                        Andares superiores acessíveis por elevador.<br>
-                        Rua Duque de Caxias, 1454, Centro de Porto Alegre, CEP 90010-281, Brasil.<br>
-                        Após fazer uma reserva, todas as informações sobre a propriedade, incluindo telefone e e-mail,
-                        constarão
-                        tanto na confirmação como em sua conta.
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
-                    <img src="../IMG/hotel/ritter.jpg" alt="fachada do Hotel">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo">Ritter Hotel </h2>
-                    <p class="card-descricao">
-                        Acessibilidade.<br>
-                        Pia do banheiro mais baixa.<br>
-                        Vaso sanitário com barras de apoio.<br>
-                        Acessível para cadeiras de rodas.<br>
-                        Andares superiores acessíveis por elevador.<br>
-                        Largo Vespasiano Julio Veppo, 55, Porto Alegre, CEP 90035-040, Brasil.<br>
-                        Após fazer uma reserva,
-                        todas as informações sobre a propriedade, incluindo telefone e e-mail, constarão tanto na
-                        confirmação como em sua conta.
-
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
-                    <img src="../IMG/hotel/master.jpg" alt="Fachada de entrada do Hotel ">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo"> Master Express Cidade Baixa </h2>
-                    <p class="card-descricao">
-                        Acessibilidade.<br>
-                        Pia do banheiro mais baixa.<br>
-                        Vaso sanitário elevado.<br>
-                        Vaso sanitário com barras de apoio.<br>
-                        Acessível para cadeiras de rodas.<br>
-                        Andares superiores acessíveis por elevador.<br>
-                        Rua Sarmento Leite, 865, Porto Alegre, CEP 90050170, Brasil.<br>
-                        Após fazer uma reserva, todas as
-                        informações sobre a propriedade, incluindo telefone e e-mail, constarão tanto na confirmação
-                        como em sua conta.
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
-                    <img src="../IMG/hotel/slaviero.jpg" alt="foto da fachada do Hotel">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo"> Slaviero Porto Alegre Moinhos </h2>
-                    <p class="descricao">
-                        Acessibilidade.<br>
-                        Vaso sanitário elevado.<br>
-                        Vaso sanitário com barras de apoio.<br>
-                        Acessível para cadeiras de rodas.<br>
-                        Rua Comendador Caminha , 42, Porto Alegre, CEP 90430-030, Brasil.<br>
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top">
-                    <img src="../IMG/hotel/intercity.jpg" alt="foto do holl de entrada">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo"> Intercity Porto Alegre Cidade Baixa </h2>
-                    <p class="card-descricao">
-                        Acessibilidade
-                        Pia do banheiro mais baixa
-                        Vaso sanitário elevado
-                        Vaso sanitário com barras de apoio
-                        Acessível para cadeiras de rodas
-                        Andares superiores acessíveis por elevador
-
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
-                    <img src="../IMG/hotel/milao.jpg" alt="Foto da fachada do Hotel">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo"> Milão Hotel </h2>
-                    <p class="card-descricao">
-                        Acessibilidade.<br>
-                        Andares superiores acessíveis por elevador.<br>
-                        Toda a unidade localizada no térreo.<br>
-                        Avenida Assis Brasil, 7675 , Porto Alegre, CEP 91140-001, Brasil.<br>
-                        Após fazer uma reserva, todas as informações sobre a propriedade, incluindo telefone e e-mail,
-                        constarão tanto na confirmação como em sua conta.
-                    </p>
-                </div>
-            </div>
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
-                    <img src="../IMG/hotel/deville.jpg" alt="foto de aparador holl de entrada">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo"> Hotel Deville Prime Porto Alegre </h2>
-                    <p class="card-descricao">
-                        Acessibilidade.<br>
-                        Pia do banheiro mais baixa.<br>
-                        Vaso sanitário com barras de apoio.<br>
-                        Acessível para cadeiras de rodasAvenida dos Estados, 1909, Porto Alegre, CEP 90200-001, Brasil
-
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
-                    <img src="../IMG/hotel/continental.jpg" alt="foto da fachada do Hotel">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo"> Hotel Continental Business</h2>
-                    <p class="card-descricao">
-                        Acessibilidade
-                        Pia do banheiro mais baixa
-                        Vaso sanitário com barras de apoio
-                        Acessível para cadeiras de rodas
-                        Andares superiores acessíveis por elevador
-                        <br>
-                    </p>
-                </div>
-            </div>
-
-            <div class="card mb-4 shadow-sm">
-                <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
-                    <img src="../IMG/hotel/piazza.jpg"
-                        alt="foto da Porta de entrada em vidro com capcho com o nome do Hotel">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="card-titulo"> Piazza Navona Porto Alegre By Intercity </h2>
-                    <p class="card-descricao">
-                        Acessibilidade.<br>
-                        Pia do banheiro mais baixa.<br>
-                        Vaso sanitário com barras de apoio.<br>
-                        Acessível para cadeiras de rodas.<br>
-                        Av. Independência, 813, Porto Alegre, CEP 90035-076, Brasil.<br>
-                        Após fazer uma reserva, todas as informações sobre a propriedade, incluindo telefone e e-mail,
-                        constarão tanto na confirmação como em sua conta.
-
-                    </p>
-                </div>
-            </div>
+          </p>
         </div>
-    </main>
+      </div>
+
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/hotel/master.jpg" alt="Fachada de entrada do Hotel ">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Master Express Cidade Baixa </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Pia do banheiro mais baixa.<br>
+            Vaso sanitário elevado.<br>
+            Vaso sanitário com barras de apoio.<br>
+            Acessível para cadeiras de rodas.<br>
+            Andares superiores acessíveis por elevador.<br>
+            Rua Sarmento Leite, 865, Porto Alegre, CEP 90050170, Brasil.<br>
+            Após fazer uma reserva, todas as
+            informações sobre a propriedade, incluindo telefone e e-mail, constarão tanto na confirmação
+            como em sua conta.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/hotel/slaviero.jpg" alt="foto da fachada do Hotel">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Slaviero Porto Alegre Moinhos </h2>
+          <p class="descricao">
+            Acessibilidade.<br>
+            Vaso sanitário elevado.<br>
+            Vaso sanitário com barras de apoio.<br>
+            Acessível para cadeiras de rodas.<br>
+            Rua Comendador Caminha , 42, Porto Alegre, CEP 90430-030, Brasil.<br>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top">
+          <img src="../IMG/hotel/intercity.jpg" alt="foto do holl de entrada">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Intercity Porto Alegre Cidade Baixa </h2>
+          <p class="card-descricao">
+            Acessibilidade
+            Pia do banheiro mais baixa
+            Vaso sanitário elevado
+            Vaso sanitário com barras de apoio
+            Acessível para cadeiras de rodas
+            Andares superiores acessíveis por elevador
+
+          </p>
+        </div>
+      </div>
+
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/hotel/milao.jpg" alt="Foto da fachada do Hotel">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Milão Hotel </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Andares superiores acessíveis por elevador.<br>
+            Toda a unidade localizada no térreo.<br>
+            Avenida Assis Brasil, 7675 , Porto Alegre, CEP 91140-001, Brasil.<br>
+            Após fazer uma reserva, todas as informações sobre a propriedade, incluindo telefone e e-mail,
+            constarão tanto na confirmação como em sua conta.
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/hotel/deville.jpg" alt="foto de aparador holl de entrada">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Hotel Deville Prime Porto Alegre </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Pia do banheiro mais baixa.<br>
+            Vaso sanitário com barras de apoio.<br>
+            Acessível para cadeiras de rodasAvenida dos Estados, 1909, Porto Alegre, CEP 90200-001, Brasil
+
+          </p>
+        </div>
+      </div>
+
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/hotel/continental.jpg" alt="foto da fachada do Hotel">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Hotel Continental Business</h2>
+          <p class="card-descricao">
+            Acessibilidade
+            Pia do banheiro mais baixa
+            Vaso sanitário com barras de apoio
+            Acessível para cadeiras de rodas
+            Andares superiores acessíveis por elevador
+            <br>
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/hotel/piazza.jpg" alt="foto da Porta de entrada em vidro com capcho com o nome do Hotel">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Piazza Navona Porto Alegre By Intercity </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Pia do banheiro mais baixa.<br>
+            Vaso sanitário com barras de apoio.<br>
+            Acessível para cadeiras de rodas.<br>
+            Av. Independência, 813, Porto Alegre, CEP 90035-076, Brasil.<br>
+            Após fazer uma reserva, todas as informações sobre a propriedade, incluindo telefone e e-mail,
+            constarão tanto na confirmação como em sua conta.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
 
 </body>
 
 <!-- Rodapé -->
 <footer>
-    <div class="footer-container">
+  <div class="footer-container">
 
-        <!-- BLOCO 1 - MAPS -->
-        <div class="map">
-            <h5> Localização </h5>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.79161441889!2d-51.2188929!3d-30.0428357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1755805781151!5m2!1spt-BR!2sbr"
-                width="500px" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
+    <!-- BLOCO 1 - MAPS -->
+    <div class="map">
+      <h5> Localização </h5>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.79161441889!2d-51.2188929!3d-30.0428357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1755805781151!5m2!1spt-BR!2sbr"
+        width="500px" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 
 
-        <!-- BLOCO 2 - EMAIL/GITHUB -->
-        <div class="footer-links">
-            <h5> Contatos </h5>
-            <br>
-            <br>
-            <br>
+    <!-- BLOCO 2 - EMAIL/GITHUB -->
+    <div class="footer-links">
+      <h5> Contatos </h5>
+      <br>
+      <br>
+      <br>
 
-            <a href="mailto:sonimaridosreis@gmail.com">
-                <img src="../IMG/emailpreto.png" width="40px" height="40px" alt="email"> Sonimaridosreis@gmail.com</a>
+      <a href="mailto:sonimaridosreis@gmail.com">
+        <img src="../IMG/emailpreto.png" width="40px" height="40px" alt="email"> Sonimaridosreis@gmail.com</a>
 
-            <a href="https://github.com/sonimari" target="_blank">
-                <img src="../IMG/github.png" width="40px" height="40px"> GitHub Sonimári</a>
+      <a href="https://github.com/sonimari" target="_blank">
+        <img src="../IMG/github.png" width="40px" height="40px"> GitHub Sonimári</a>
 
-            <a href="https://www.linkedin.com/in/sonim%C3%A1ri-reis-20aa1a326" target="_blank">
-                <img src="../IMG/linkedinpreto.png" width="40px" height="40px"> Sonimári Souza Dos Reis </a>
-        </div>
+      <a href="https://www.linkedin.com/in/sonim%C3%A1ri-reis-20aa1a326" target="_blank">
+        <img src="../IMG/linkedinpreto.png" width="40px" height="40px"> Sonimári Souza Dos Reis </a>
+    </div>
 
-        <!-- BLOCO 3 - COPYRIGHT -->
-        <div class="copy">
-            <h5>Obrigado por ter visitado o nosso site ♡</h5>
-            <br>
-            <br>
-            <br>
+    <!-- BLOCO 3 - COPYRIGHT -->
+    <div class="copy">
+      <h5>Obrigado por ter visitado o nosso site ♡</h5>
+      <br>
+      <br>
+      <br>
 
-            <div class="copy-marcas">
-                <img src="../IMG/Senac.png">
-                <img src="../IMG/Sucesu.png">
-                <br>
-                <br>
-                <br>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <p>Copyright ©2025 | Todos os direitos reservados.</p>
-        </div>
+      <div class="copy-marcas">
+        <img src="../IMG/Senac.png">
+        <img src="../IMG/Sucesu.png">
+        <br>
+        <br>
+        <br>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>Copyright ©2025 | Todos os direitos reservados.</p>
+    </div>
 
 </footer>
 

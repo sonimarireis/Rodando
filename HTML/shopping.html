@@ -2,176 +2,361 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" lang="pt-br">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
-    <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+  <meta charset="UTF-8" lang="pt-br">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
 
-    <title> Shopping </title>
+  <title> Rodando por aí </title>
 
 </head>
 
 <body>
 
-    <a href="index.html"></a>
+  <a href="index.html"></a>
 
-    <!-- Script de acessibilidade (Zoom) -->
-    <style>
-        body {
-            font-size: 16px;
-            /* tamanho inicial */
-        }
+  <!-- Script de acessibilidade (Zoom) -->
+  <style>
+    body {
+      font-size: 16px;
+      /* tamanho inicial */
+    }
 
-        .botoes {
-            margin: 20px;
-        }
+    .botoes {
+      margin: 20px;
+    }
 
-        button {
-            padding: 8px 12px;
-            margin: 0 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    button {
+      padding: 8px 12px;
+      margin: 0 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 
-    <header>
-        <div class="header-container">
-            <div class="coluna">
-                <img src="../IMG/logo.png" height="300px" width="300px" alt="foto_logo">
-            </div>
+  <header>
+    <div class="header-container">
+      <div class="coluna">
+        <img src="../IMG/logo.png" height="300px" width="300px" alt="foto_logo">
+      </div>
+    </div>
+
+    <div id="acessibilidade">
+      <button class="btn btn-primary" id="diminuir" aria-label="Diminuir fonte">A-</button>
+      <button class="btn btn-primary" id="aumentar" aria-label="Aumentar fonte">A+</button>
+    </div>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+  </header>
+
+  <!-- Navegação -->
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"> Home </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="alimentacao.html">Alimentação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hotel.html">Hotéis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shopping.html">Shopping</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mercado.html">Mercados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="praca.html">Praças</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="inspiracao.html">Inspiração</a>
+          </li>
+
+        </ul>
+        <form class="d-flex ms-4">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  </header>
+
+  <main>
+    <div class="parte-um">
+      <div class="conteudo-central">
+      </div>
+    </div>
+
+    <div class="main-titulo"><br>
+      <h2> Aqui alguns Lojas com acessibilidade garantida! </h2><br>
+    </div>
+
+    <div class="card-main">
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top">
+          <img src="../IMG/shopping/kan.jpg" alt="Logo do shopping">
         </div>
 
-        <div id="acessibilidade">
-            <button class="btn btn-primary" id="diminuir" aria-label="Diminuir fonte">A-</button>
-            <button class="btn btn-primary" id="aumentar" aria-label="Aumentar fonte">A+</button>
+        <div class="card-body">
+          <h2 class="card-titulo"> Center Kan </h2>
+          <p class="card-descricao">
+            Acessibilidade<br>
+            Assento com acessibilidade para pessoas em cadeira de rodas.<br>
+            Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+            Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+            Estacionamento com acessilidade para pessoas em cadeira de rodas<br>
+            Estr. João Antônio da Silveira, 1335 - Restinga, Porto Alegre - RS, 91790-519.<br>
+            Aberto ⋅ Fecha às 21:00.<br>
+            centerkan.com.br.<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top">
+          <img src="../IMG/shopping/jardim.webp" alt="fachada do shopping">
         </div>
 
-        <!-- VLibras -->
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
+        <div class=" card-body">
+          <h2 class="card-titulo"> Shopping Jardim Verde </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+            Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+            Estacionamento com acessibilidade para pessoas em cadeira de rodas<br>
+            Av. Eduardo Prado, 1954 - Cavalhada, Porto Alegre - RS, 91751-000.<br>
+            Aberto ⋅ Fecha às 18:30.<br>
+            jardimverdeshopping.com.br.<br>
+            Contato:(51) 3266-2696.<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top">
+          <img src="../IMG/shopping/cassol.png" alt="fachadad da loja ">
         </div>
 
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
-
-    </header>
-
-    <!-- Navegação -->
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html"> Home </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="alimentacao.html">Alimentação</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="hotel.html">Hotéis</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shopping.html">Shopping</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mercado.html">Mercados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="praca.html">Praças</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="inspiracao.html">Inspiração</a>
-                    </li>
-
-                </ul>
-                <form class="d-flex ms-4">
-                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
-                </form>
-            </div>
+        <div class="card-body">
+          <h2 class="card-titulo"> Cassol Center lar</h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+            Estacionamento com acessibilidade para pessoas em cadeira de rodas<br>
+            Av. Eduardo Prado, 415 - Cavalhada, Porto Alegre - RS, 91751-000.<br>
+            Aberto ⋅ Fecha às 21:00.<br>
+            cassol.com..<br>
+            Contato:4001-1515.<br>
+          </p>
         </div>
-    </nav>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <main>
-        <!-- Parte Um - Fundo imagem e centralização -->
-        <div class="parte-um">
-            <div class="conteudo-central">
-            </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/shopping/pian.jpg" alt="Logo da loja ">
         </div>
-    </main>
 
+        <div class="card-body">
+          <h2 class="card-titulo"> Comercial Pian </h2>
+          <p class="descricao">
+            Acessibilidade.<br>
+            Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+            Estacionamento com acessibilidade para pessoas em cadeira de rodas<br>
+            Av. João Salomoni, 1115 - Vila Nova, Porto Alegre - RS, 91740-830.<br>
+            comercialpian.com.br.<br>
+            Contato:(51) 3248-9778.<br>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top">
+          <img src="../IMG/shopping/praia.jpg" alt="foto da logo do shopping">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Shopping Praia de Belas </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+            Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+            Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+            Av. Praia de Belas, 1181 - Praia de Belas, Porto Alegre - RS, 90110-001.<br>
+            Aberto ⋅ Fecha às 22:00.<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/shopping/total.png" alt="Foto da Logo do shopping">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Shopping Total </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+            Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+            Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+            Av. Cristóvão Colombo, 545 - prédio 7 - Independência, Porto Alegre - RS, 90035-153Aberto.<br>
+            Fecha às 22:00Shoppingtotal.com.br.<br>
+            Contato:(51) 3018-7000.<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/shopping/rua.jpg" alt="foto da fachada do shopping">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Rua da Praia Shopping </h2>
+          <p class="card-descricao">
+            Acessibilidade<br>
+            Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+            Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+            Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+            R. dos Andradas, 1001 - Centro Histórico, Porto Alegre - RS, 90020-007Aberto.<br>
+            Fecha às 20:00ruadapraiashopping.com.br.<br>
+            Contato:(51) 3211-6600.<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/shopping/moinhos.png" alt="fotod alogo do shopping">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Shopping Moinhos</h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+            Estacionamento com acessibilidade para pessoas em cadeira de rodas.<br>
+            Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+            R. Olávo Barreto Viana, 36 - Moinhos de Vento, Porto Alegre - RS, 90570-070Aberto .<br>
+            Fecha às 22:00moinhosshopping.com.br.<br>
+            Contato:4004-3373.<br>
+            <br>
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-img-top"> <!--Alterar tamanho no css por "card-imagem"-->
+          <img src="../IMG/shopping/iguatemi.jpeg" alt="foto da fachada do Shopping">
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-titulo"> Shopping Iguatemi Porto Alegre </h2>
+          <p class="card-descricao">
+            Acessibilidade.<br>
+            Banheiro com acessibilidade para pessoas em cadeira de rodas.<br>
+            Entrada com acessibilidade para pessoas em cadeira de rodas.<br>
+            Aluguel de cadeira de rodas.<br>
+            Av. João Wallig, 1800 - Passo d'Areia, Porto Alegre - RS, 91349-900.<br>
+            Aberto ⋅ Fecha às 22:00.<br>
+            iguatemiportoalegre.com.br.<br>
+            Contato:(51) 2797-0738.<br>
+          </p>
+        </div>
+      </div>
+  </main>
 </body>
 
 <!-- Rodapé -->
 <footer>
-    <div class="footer-container">
+  <div class="footer-container">
 
-        <!-- BLOCO 1 - MAPS -->
-        <div class="map">
-            <h5> Localização </h5>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.79161441889!2d-51.2188929!3d-30.0428357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1755805781151!5m2!1spt-BR!2sbr"
-                width="500px" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
+    <!-- BLOCO 1 - MAPS -->
+    <div class="map">
+      <h5> Localização </h5>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.79161441889!2d-51.2188929!3d-30.0428357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1755805781151!5m2!1spt-BR!2sbr"
+        width="500px" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 
 
-        <!-- BLOCO 2 - EMAIL/GITHUB -->
-        <div class="footer-links">
-            <h5> Contatos </h5>
-            <br>
-            <br>
-            <br>
+    <!-- BLOCO 2 - EMAIL/GITHUB -->
+    <div class="footer-links">
+      <h5> Contatos </h5>
+      <br>
+      <br>
+      <br>
 
-            <a href="mailto:sonimaridosreis@gmail.com">
-                <img src="../IMG/emailpreto.png" width="40px" height="40px" alt="email"> Sonimaridosreis@gmail.com</a>
+      <a href="mailto:sonimaridosreis@gmail.com">
+        <img src="../IMG/emailpreto.png" width="40px" height="40px" alt="email"> Sonimaridosreis@gmail.com</a>
 
-            <a href="https://github.com/sonimari" target="_blank">
-                <img src="../IMG/github.png" width="40px" height="40px"> GitHub Sonimári</a>
+      <a href="https://github.com/sonimari" target="_blank">
+        <img src="../IMG/github.png" width="40px" height="40px"> GitHub Sonimári</a>
 
-            <a href="https://www.linkedin.com/in/sonim%C3%A1ri-reis-20aa1a326" target="_blank">
-                <img src="../IMG/linkedinpreto.png" width="40px" height="40px"> Sonimári Souza Dos Reis </a>
-        </div>
+      <a href="https://www.linkedin.com/in/sonim%C3%A1ri-reis-20aa1a326" target="_blank">
+        <img src="../IMG/linkedinpreto.png" width="40px" height="40px"> Sonimári Souza Dos Reis </a>
+    </div>
 
-        <!-- BLOCO 3 - COPYRIGHT -->
-        <div class="copy">
-            <h5>Obrigado por ter visitado o nosso site ♡</h5>
-            <br>
-            <br>
-            <br>
+    <!-- BLOCO 3 - COPYRIGHT -->
+    <div class="copy">
+      <h5>Obrigado por ter visitado o nosso site ♡</h5>
+      <br>
+      <br>
+      <br>
 
-            <div class="copy-marcas">
-                <img src="../IMG/Senac.png">
-                <img src="../IMG/Sucesu.png">
-                <br>
-                <br>
-                <br>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <p>Copyright ©2025 | Todos os direitos reservados.</p>
-        </div>
+      <div class="copy-marcas">
+        <img src="../IMG/Senac.png">
+        <img src="../IMG/Sucesu.png">
+        <br>
+        <br>
+        <br>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>Copyright ©2025 | Todos os direitos reservados.</p>
+    </div>
 
-    </footer>
+</footer>
 
 
 
