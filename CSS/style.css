@@ -155,10 +155,43 @@ nav {
   font-style: normal;
   font-weight: normal;
 }
-
+ 
+      
 main {
   margin: 120px;
 }
+
+.container {
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+  
+.alimetnacao {
+  grid-column: span 3 / span 3;
+}
+
+.div2 {
+  grid-column: span 3 / span 3;
+  grid-row-start: 2;
+}
+
+.div3 {
+  grid-column: span 3 / span 3;
+  grid-row-start: 3;
+}
+
+.div4 {
+  grid-column: span 3 / span 3;
+  grid-row-start: 4;
+}
+
+.div5 {
+  grid-column: span 3 / span 3;
+  grid-row-start: 5;
+}
+
 .main-titulo {
   text-align: center;
   margin-top: 30px;
@@ -167,16 +200,6 @@ main {
 .main-titulo h2 {
   font-weight: bold;
   font-family: 'robot';
-}
-
-.card-main {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
-  gap: 30px;                             /* espaçamento entre cards */
-  max-width: 1200px;
-  margin: 40px auto;                     /* centraliza o container */
-  padding: 10px;
-  box-sizing: border-box;
 }
 
 .card {

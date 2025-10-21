@@ -1,446 +1,74 @@
-* {
+/* Reset e altura do mapa */
+html, body, main, #map {
+  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  /* Adicionado: Garante que padding e border não aumentem a largura total */
 }
 
 body {
   background-color: rgb(215, 201, 255);
-
+  font-size: 16px;
 }
 
-/* === HEADER: Flexível e Adaptável === */
 header {
-  width: 100%;
-  height: auto;
-  /* Alterado de 250px para auto ou um min-height */
-  min-height: 120px;
-  /* Altura mínima para telas menores */
   background-color: #001f4d;
   padding: 10px 20px;
   display: flex;
-  flex-direction: column;
-  /* Padrão em mobile: elementos um abaixo do outro */
-  align-items: center;
   justify-content: center;
-
+  align-items: center;
+  flex-direction: column;
   position: relative;
-
 }
 
 .logo {
-  /* Removido position: absolute para fluir com o header */
-  position: static;
-  transform: none;
-  text-align: center;
-  font-size: 24px;
-
-  font-weight: bold;
+  width: 150px;
+  height: auto;
   margin-bottom: 10px;
-  /* Espaço abaixo do logo em mobile */
 }
 
-/* Acessibilidade (direita) */
 #acessibilidade {
-  /* Ajustado para fluir, ou em mobile ficar abaixo do logo */
-  position: static;
-  transform: none;
   display: flex;
   gap: 10px;
-  /* Reduzido o espaço em mobile */
-  align-items: center;
-  margin-bottom: 10px;
-  /* Espaço abaixo da acessibilidade em mobile */
 }
 
-#acessibilidade .btn {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-/* === NAVEGAÇÃO === */
 nav {
-  display: block;
   background-color: #0c9fb9;
-  padding: 10px 20px;
-  /* Padding ajustado */
 }
 
-#navbarSupportedContent .navbar-nav {
-  display: flex;
-  justify-content: flex-start;
-  flex: 1;
+.navbar-nav .nav-link {
+  color: #fff;
 }
 
-
-/* Color letras */
-#navbarSupportedContent .navbar-nav .nav-link {
-  color: #ffffff;
-  font-weight: 500;
-}
-
-/* Color letras hover */
-#navbarSupportedContent .navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover {
   color: #0d6efd;
-  font-weight: 500;
-}
-
-/* Botão de pesquisa */
-#navbarSupportedContent .btn {
-  background-color: #3ac9d3;
-  
-  color: #fff;
-
-  border: none;
-
-  border-radius: 5px;
-
-  padding: 6px 16px;
-
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-/* hover no botão de pesquisa */
-#navbarSupportedContent .btn:hover {
-  background-color: #0d6efd;
-
-  color: #fff;
-}
-
-/* Botão hamburguer branco */
-.navbar-toggler {
-  border: 1px solid #ffffff;
-  /* Adicionei borda para visibilidade */
 }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* Faz o menu abrir sobre o conteúdo */
-.navbar-collapse {
-  background-color: #4cacc9;
-
-  padding: 10px;
-  position: absolute;
-  top: 100%;
-
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
-}
-
-/* Remove o contorno e sombra padrão ao focar no botão do menu */
-.navbar-toggler:focus,
-.navbar-toggler:active {
-  outline: none !important;
-
-  box-shadow: none !important;
-
-  border-color: #fff !important;
-
-}
-
-
-/* === MAIN PARTE UM === */
-.parte-um {
-  min-height: 100vh;
-
-  width: 100%;
-  background: url('../IMG/acessivel.png') no-repeat center center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  /* Adiciona padding para evitar que o conteúdo encoste nas bordas */
-}
-  /* Botão vamos rodar por aí*/
-  .btn-central {
-    padding: 12px 25px;
-    background-color: #43738ab6;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 0px;
-  }
-
-/* Faz o botão mudar de cor suavemente */
-.btn-central:hover {
-  background-color: #0d6efd;
-  color: #fff;
-}
-
-/* === PARTE DOIS: Fundo branco e centralização flexível === */
-.parte-dois {
-  width: 100%;
-  padding: 50px 20px;
-  /* Padding vertical e horizontal fixo, mas não excessivo */
-  background-color: #ffffff;
-  text-align: center;
-}
-
-/* Centraliza o conteúdo e limita a largura em telas grandes */
-.nossa-historia {
-  max-width: 1000px;
-  /* Largura máxima para não esticar demais em telas muito grandes */
-  margin: 0 auto;
-  /* Centraliza o bloco na página */
-}
-
-.nossa-historia h2 {
-  font-weight: bold;
-}
-
-.nossa-historia .nossa {
-  color: #307ca0;
-  font-size: 35px;
-}
-
-.nossa-historia .texto {
-  margin-top: 30px;
-  /* Reduzido para ficar melhor em mobile */
-  color: #000000;
-  font-size: 16px;
-  /* Ajustado para 16px, mais comum e legível em mobile */
-  line-height: 1.6;
-  text-align: justify;
-  /* Melhora a leitura do bloco de texto */
-}
-
-/* Estilizando a lista dentro do texto */
-.nossa-historia .texto ul {
-  margin: 20px 0;
-  /* Ajustei a margem */
-  padding-left: 20px;
-  /* Adicionado padding para o "list-style" */
-  list-style: disc;
-  /* Usando disc para evitar problemas com before */
-  text-align: left;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Removido o seletor li::before problemático para usar list-style: disc/circle */
-
-.frase-botao .frase p {
-  color: #320699;
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 0px;
-}
-
-/* === RODAPÉ === */
 footer {
   background: #001f4d;
   color: #fff;
   padding: 40px 20px;
-  /* Padding mais amigável em mobile */
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
-  /* Removido grid-template-columns pois o flexbox já está controlando */
-  max-width: 1200px;
-  /* Limita a largura em telas grandes */
-  margin: 0 auto;
-  /* Centraliza o conteúdo do rodapé */
-}
-
-
-/* ===== BLOCO MAP, LINKS, COPYRIGHT: Sem alterações substanciais (já são bons) ===== */
-.map h5 {
-  margin-bottom: 10px;
-  color: #d78fea;
-}
-
-.footer-links h5 {
-  margin-bottom: 15px;
-  color: #d78fea;
+  text-align: center;
 }
 
 .footer-links a {
-  display: flex;
-  align-items: center;
+  display: block;
   margin: 10px 0;
   color: #fff;
   text-decoration: none;
 }
 
-.footer-links img {
-  margin-right: 10px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-
-.footer-links img:hover {
-  transform: scale(1.1);
-  filter: brightness(0) saturate(100%) invert(83%) sepia(13%) saturate(1941%) hue-rotate(150deg) brightness(92%) contrast(94%);
-}
-
-
-.footer-links a:hover {
-  color: #d3d3d3;
-}
-
-.copy {
-  text-align: center;
-}
-
-.copy h5 {
-  margin-bottom: 10px;
-  color: #d78fea;
-}
-
-.copy p {
-  font-weight: bold;
-  color: white;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-
-.copy .copy-marcas {
-  margin-top: 20px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 35px;
-}
-
-.copy .copy-marcas img {
+.copy-marcas img {
   width: 110px;
-  height: auto;
+  margin: 0 10px;
 }
 
-/* === MEDIA QUERIES === */
-
-/* Esconde o hamburguer em telas grandes (desktop) */
-@media (min-width: 992px) {
-  .navbar-toggler {
-    display: none;
-  }
-
-  /* Ajuste do Header para Desktop */
-  header {
-    flex-direction: row;
-    /* Volta a ser uma linha no desktop */
-    justify-content: center;
-    /* Centraliza os elementos na linha */
-    height: 250px;
-    /* Altura original em desktop */
-  }
-
-  .logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    /* Adicionado para ajudar a centralizar verticalmente */
-    transform: translate(-50%, -50%);
-    /* Centralização completa */
-    margin: 0;
-  }
-
-  #acessibilidade {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    gap: 20px;
-    margin: 0;
-  }
-}
-
-/* Layout para Tablets (entre 768px e 991px) */
-@media (max-width: 991px) {
-
-  /* Header um pouco mais compacto em tablets */
-  header {
-    min-height: 150px;
-  }
-
-  /* Rodapé em 2 colunas para tablets */
-  .footer-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* 2 colunas */
-    gap: 40px;
-  }
-
-  /* Faz o bloco de marcas ir para a segunda coluna, se necessário, ou alinha à esquerda */
-  .copy {
-    grid-column: 1 / -1;
-    /* Ocupa as duas colunas */
-    text-align: left;
-  }
-
-  .copy .copy-marcas {
-    justify-content: flex-start;
-  }
-}
-
-/* Layout para Smartphones (até 767px - incluí o 480px original aqui) */
-@media (max-width: 767px) {
-
-  /* Header mais compacto */
-  header {
-    min-height: auto;
-  }
-
-  /* Reduz o tamanho da fonte do título principal em telas pequenas */
-  .nossa-historia .nossa {
-    font-size: 28px;
-  }
-
-  /* Rodapé empilhado (seções uma abaixo da outra) */
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    text-align: center;
-  }
-
-  /* Map responsivo */
-  .footer-container .map iframe {
-    width: 100% !important;
-    max-width: 350px;
-    /* Ajuste o máximo */
-    height: 200px;
-    padding-top: 10px;
-
-  }
-
-  /* Links centralizados */
-  .footer-links {
-    width: 100%;
-  }
-
-  .footer-links a {
-    justify-content: center;
-  }
-
-  /* Copyright responsivo centralizado */
-  .copy {
-    text-align: center;
-  }
-
-  .copy .copy-marcas {
-    justify-content: center;
-  }
-
-  .copy p {
-    text-align: center;
-  }
+/* Botões de acessibilidade */
+button {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
 }

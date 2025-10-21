@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" lang="pt-br">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../CSS/style_index.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+  <title> Rodando por aí </title>
+</head>
+
+<body>
+
+  <!-- Script de acessibilidade (Zoom) -->
+  <style>
+    body {
+      font-size: 16px;
+      /* tamanho inicial */
+    }
+
+    .botoes {
+      margin: 20px;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin: 0 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+
+  <header>
+    <div class="header-container">
+      <div class="coluna">
+        <img src="../IMG/logo.png" height="300px" width="300px" alt="foto_logo">
+      </div>
+    </div>
+
+    <div id="acessibilidade">
+      <button class="btn btn-primary" id="diminuir" aria-label="Diminuir fonte">A-</button>
+      <button class="btn btn-primary" id="aumentar" aria-label="Aumentar fonte">A+</button>
+    </div>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+  </header>
+
+  <!-- Navegação -->
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="alimentacao.html">Alimentação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hotel.html">Hotéis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shopping.html">Shopping</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mercado.html">Mercados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="praca.html">Praças</a>
+          </li>
+          <li class="nav-item">
+
+            <a class="nav-link" href="inspiracao.html">Inspiração</a>
+          </li>
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="nossa_historia.html"> Nossa História </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Sobre nós
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#nossa-historia">Nossa História</a></li>
+              <li><a class="dropdown-item" href="#inspiracao">Inspiração</a></li>
+              <li><a class="dropdown-item" href="#destaques">Destaques</a></li>
+            </ul>
+          </li>  
+        </ul>
+
+        <form class="d-flex ms-4" id="search-form">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" id="search-input">
+          <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <main>
+    <!-- Parte Um - Fundo imagem e centralização -->
+    <div class="parte-um">
+      <div class="conteudo-central">
+      </div>
+    </div>
+
+    <!-- Parte Dois - Fundo branco -->
+    <div class="parte-dois" id="nossa-historia">
+      <div class="nossa-historia">
+        <h2>
+          <span class="nossa">Nossa História</span>
+        </h2>
+
+        <div class="texto">
+
+          <p><strong> Descubra Porto Alegre de uma forma acessivel para todos! </strong></p>
+
+          <p> Encontrar informações confiáveis e claras sobre acessibilidade em espaços públicos ainda é um grande
+            desafio.</p>
+          <p> Muitas vezes, ao procurar bares, restaurantes, praças ou estabelecimentos acessíveis, as informações
+            disponíveis na internet são incompletas, desatualizadas ou pouco objetivas. </p>
+          <p>Isso gera frustração para quem precisa planejar seus deslocamentos e atividades cotidianas, já que a
+            acessibilidade não é um detalhe, mas um direito essencial para garantir inclusão e autonomia.</p>
+
+          <p> Pensando nisso, surge a ideia de um site de busca de pontos com acessibilidade. A proposta é reunir, em um
+            só lugar, dados organizados e verificados sobre locais que oferecem recursos acessíveis, como rampas,
+            banheiros adaptados, cardápios em braile,</p>
+          <p> sinalização tátil ou atendimento especializado. Assim, a plataforma não apenas facilita a vida de pessoas
+            com deficiência, mas também promove maior conscientização e responsabilidade social entre os
+            estabelecimentos.</p>
+
+          <p>Mais do que uma ferramenta prática, esse site seria um passo importante para transformar a acessibilidade
+            em algo visível e valorizado, ajudando a construir uma cidade mais justa e inclusiva.</p>
+
+          <ul>
+            <li>Informações restaurante e bares;</li>
+            <li>Hotéis;</li>
+            <li>Principais pontos turísticos;</li>
+            <li>Lojas e Mercados;</li>
+            <li>Entre outros.</li>
+          </ul>
+          <p>Mais do que dicas, criamos uma experiência acolhedora e prática, para que cada possa planejar suas
+            atividades sendo nativo ou turistas.</p>
+          <p>Junte-se a nós nessa jornada de descobertas!</p>
+          <div class="botao">
+            <a href="alimentacao.html"><button class="btn-central"> Vamos rodar por aí </button></a>
+          </div>
+        </div>
+      </div>
+
+  </main>
+
+  <script src="../IMG/acessivel.png"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
