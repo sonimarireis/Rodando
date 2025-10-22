@@ -4,34 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Rodando por aí</title>
   <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-        crossorigin="anonymous">
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""/>
-
-  <!-- CSS principal -->
+  <!--CSS-->
   <link rel="stylesheet" type="text/css" href="../CSS/style_index.css">
 
-  <!-- VLibras -->
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- VLibras -->
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
-</head>
+  <title>Rodando por aí</title>
 
+</head>
 <body>
 
 <header>
   <div class="header-container">
-    <div class="coluna">
-      <img src="../IMG/logo.png" alt="Logo" class="logo">
-    </div>
+    <img src="../IMG/logo.png" alt="Logo" class="logo">
   </div>
 
   <div id="acessibilidade">
@@ -51,11 +42,9 @@
   new window.VLibras.Widget('https://vlibras.gov.br/app');
 </script>
 
-<!-- Navegação -->
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -63,9 +52,8 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-             data-bs-toggle="dropdown" aria-expanded="false">Sobre nós</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sobre nós</a>
+          <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="nossa_historia.html">Nossa História</a></li>
             <li><a class="dropdown-item" href="inspiracao.html">Inspiração</a></li>
             <li><a class="dropdown-item" href="destaques.html">Destaques</a></li>
@@ -74,7 +62,7 @@
       </ul>
 
       <form class="d-flex ms-4" id="search-form">
-        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" id="search-input">
+        <input class="form-control me-2" type="search" placeholder="Pesquisar (ex: restaurant, hotel, supermarket)" id="search-input">
         <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
       </form>
     </div>
@@ -82,79 +70,66 @@
 </nav>
 
 <main>
-  <!-- Mapa -->
-  <div id="map"></div>
+ 
+    <!-- BLOCO 1 - MAPS -->
+    <div class="map">
+      <h5> Localização </h5>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.79161441889!2d-51.2188929!3d-30.0428357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1755805781151!5m2!1spt-BR!2sbr"
+        width="500px" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+
+    </div>
 </main>
 
-<!-- Rodapé -->
 <footer>
   <div class="footer-container">
+
     <div class="footer-links">
-      <h5>Contatos</h5>
+
+      <!-- BLOCO 2 - EMAIL/GITHUB -->
+    <div class="footer-links">
+      <h5> Contatos </h5>
+      <br>
+      <br>
+      <br>
+
       <a href="mailto:sonimaridosreis@gmail.com">
-        <img src="../IMG/emailpreto.png" alt="email"> Sonimaridosreis@gmail.com
-      </a>
+        <img src="../IMG/emailpreto.png" width="40px" height="40px" alt="email"> Sonimaridosreis@gmail.com</a>
+
       <a href="https://github.com/sonimari" target="_blank">
-        <img src="../IMG/github.png" alt="github"> GitHub Sonimári
-      </a>
+        <img src="../IMG/github.png" width="40px" height="40px"> GitHub Sonimári</a>
+
       <a href="https://www.linkedin.com/in/sonim%C3%A1ri-reis-20aa1a326" target="_blank">
-        <img src="../IMG/linkedinpreto.png" alt="linkedin"> Sonimári Souza Dos Reis
-      </a>
+        <img src="../IMG/linkedinpreto.png" width="40px" height="40px"> Sonimári Souza Dos Reis </a>
     </div>
+
+    <!-- BLOCO 3 - COPYRIGHT -->
     <div class="copy">
       <h5>Obrigado por ter visitado o nosso site ♡</h5>
+      <br>
+      <br>
+      <br>
+
       <div class="copy-marcas">
-        <img src="../IMG/Senac.png" alt="Senac">
-        <img src="../IMG/Sucesu.png" alt="Sucesu">
+        <img src="../IMG/Senac.png">
+        <img src="../IMG/Sucesu.png">
+        <br>
+        <br>
+        <br>
       </div>
+      <br>
+      <br>
+      <br>
+      <br>
       <p>Copyright ©2025 | Todos os direitos reservados.</p>
     </div>
-  </div>
 </footer>
 
-<!-- Bootstrap Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
 
-        <!-- Script do mapa -->
-<script>
-  // Coordenadas de Porto Alegre
-  const portoAlegre = [-30.0346, -51.2177];
+<script src="../JS/acessibilidade.js">
 
-  // Criando o mapa e centralizando em Porto Alegre
-  const map = L.map('map', {
-    center: portoAlegre,
-    zoom: 13,
-    minZoom: 12,
-    maxZoom: 16,
-    maxBounds: [
-      [-30.2, -51.4],
-      [-29.9, -51.0]
-    ]
-  });
-
-  // Adicionando mapa base do OpenStreetMap
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-
-  // Marcador em Porto Alegre
-  L.marker(portoAlegre)
-    .addTo(map)
-    .bindPopup('Porto Alegre')
-    .openPopup();
 </script>
 
-
-<!-- JS de acessibilidade -->
-<script src="../JS/acessibilidade.js"></script>
-<script src="../JS/mapa.js"></script>
-
-</body>
 </html>
