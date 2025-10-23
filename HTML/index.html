@@ -70,17 +70,21 @@
 </nav>
 
 <main>
- 
-    <!-- BLOCO 1 - MAPS -->
-    <div class="map">
-      <h5> Localização </h5>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.79161441889!2d-51.2188929!3d-30.0428357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1755805781151!5m2!1spt-BR!2sbr"
-        width="500px" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+  <h1>Meu Mapa com Google Maps</h1>
+  <div id="map"></div>
 
-    </div>
+   <!-- Substitua SUA_CHAVE_AQUI pela sua chave -->
+  <script 
+    async 
+    defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0fhgvL_bukX-pcbshP4IM1O0R68BLKmc&callback=initMap&libraries=places&language=pt-BR">
+  </script>
+
+   <!-- Script do mapa -->
+   <script src="../JS/mapa.js"></script>
+
 </main>
+
 
 <footer>
   <div class="footer-container">
