@@ -1,45 +1,75 @@
-html,
-body
-{
+html {
+  font-size: 100%;
+}
+
+body {
   height: 100%;
   margin: 0;
   padding: 0;
   background-color: rgb(215, 201, 255);
-  font-size: 16px;
+ font-size: 1rem;
 }
 
 header {
   background-color: #001f4d;
   padding: 10px 20px;
+  position: relative; /* permite posicionar o conteúdo interno */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center; /* centraliza o logo */
+  align-items: center; /* centraliza verticalmente */
 }
 
+/* Logo centralizado */
 .logo {
-  width: 150px;
+  width: 250px;
   height: auto;
-  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
+/* Botões no canto direito */
 #acessibilidade {
+  position: absolute;
+  right: 30px; /* distância da borda direita */
+  top: 50%;
+  transform: translateY(-50%); /* centraliza verticalmente */
   display: flex;
   gap: 10px;
-  margin-bottom: 10px;
+}
+
+#acessibilidade .btn {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 nav {
   background-color: #0c9fb9;
 }
-
-.navbar-nav .nav-link {
-  color: #fff;
+/* Color letras */
+#navbarSupportedContent .navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: 500;
 }
 
-.navbar-nav .nav-link:hover {
+/* Color letras hover */
+#navbarSupportedContent .navbar-nav .nav-link:hover {
+  /* Color letras */
+#navbarSupportedContent .navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Color letras hover */
+#navbarSupportedContent .navbar-nav .nav-link:hover {
   color: #0d6efd;
+  font-weight: 500;
+}
 }
 
+.main-h1{
+  /* Color letras */
+  color: #ffffff;
+  font-weight: 500;
+}
 
 #map {
   width: 100%;
@@ -61,18 +91,17 @@ footer {
 .footer-container {
   display: flex;
   /* deixa os blocos lado a lado */
-  justify-content: space-between;
+  justify-content: center;
   /* distribui igualmente */
   align-items: flex-start;
   /* todos alinhados no topo */
-  gap: 30px;
+  gap: 300px;
   /* espaço entre blocos */
-  flex-direction: row; /* garante que fique horizontal */
+  flex-direction: row;
+  /* garante que fique horizontal */
 }
 
-
 /* ===== BLOCO LINKS ===== */
-
 
 .footer-links h5 {
   margin-bottom: 15px;
@@ -105,7 +134,6 @@ footer {
   filter: brightness(0) saturate(100%) invert(83%) sepia(13%) saturate(1941%) hue-rotate(150deg) brightness(92%) contrast(94%);
 }
 
-
 .footer-links a:hover {
   color: #d3d3d3;
 }
@@ -125,11 +153,9 @@ footer {
 .copy p {
   font-weight: bold;
   color: white;
-  font-size: 14px;
   opacity: 0.8;
   /* deixa mais suave */
 }
-
 
 .copy .copy-marcas {
   margin-top: 20px;

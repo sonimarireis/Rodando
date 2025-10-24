@@ -1,10 +1,10 @@
 // Acessibilidade A+ A-
-let tamanho = 16; // tamanho inicial em px
-const MIN = 10;
-const MAX = 48;
+let tamanho = 100; // tamanho inicial em %
+const MIN = 50;
+const MAX = 200;
 
 function aplicarTamanho() {
-  document.body.style.fontSize = tamanho + "px";
+  document.documentElement.style.fontSize = tamanho + "%";
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnAumentar) {
     btnAumentar.addEventListener('click', () => {
       if (tamanho < MAX) {
-        tamanho += 2;
+        tamanho += 10;
         aplicarTamanho();
       }
     });
@@ -25,10 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnDiminuir) {
     btnDiminuir.addEventListener('click', () => {
       if (tamanho > MIN) {
-        tamanho -= 2;
+        tamanho -= 10;
         aplicarTamanho();
       }
     });
   }
-
 });

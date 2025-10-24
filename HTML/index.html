@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,24 +13,45 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- VLibras -->
+  <!-- VLibras -->
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
   <title>Rodando por aí</title>
 
 </head>
+
 <body>
+
+  <!-- Script de acessibilidade (Zoom) -->
+  <style>
+    body {
+      font-size: 16px;
+      /* tamanho inicial */
+    }
+
+    .botoes {
+      margin: 20px;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin: 0 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 
 <header>
   <div class="header-container">
     <img src="../IMG/logo.png" alt="Logo" class="logo">
+
+    <div id="acessibilidade">
+      <button class="btn btn-primary" id="diminuir" aria-label="Diminuir fonte">A-</button>
+      <button class="btn btn-primary" id="aumentar" aria-label="Aumentar fonte">A+</button>
+    </div>
   </div>
 
-  <div id="acessibilidade">
-    <button class="btn btn-primary" id="diminuir" aria-label="Diminuir fonte">A-</button>
-    <button class="btn btn-primary" id="aumentar" aria-label="Aumentar fonte">A+</button>
-  </div>
-
+  <!-- VLibras pode continuar aqui -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -38,102 +60,104 @@
   </div>
 </header>
 
-<script>
-  new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
-
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sobre nós</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="nossa_historia.html">Nossa História</a></li>
-            <li><a class="dropdown-item" href="inspiracao.html">Inspiração</a></li>
-            <li><a class="dropdown-item" href="destaques.html">Destaques</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <form class="d-flex ms-4" id="search-form">
-        <input class="form-control me-2" type="search" placeholder="Pesquisar (ex: restaurant, hotel, supermarket)" id="search-input">
-        <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
-      </form>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
     </div>
-  </div>
-</nav>
+  </header>
 
-<main>
-  <h1>Meu Mapa com Google Maps</h1>
-  <div id="map"></div>
-
-   <!-- Substitua SUA_CHAVE_AQUI pela sua chave -->
-  <script 
-    async 
-    defer 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0fhgvL_bukX-pcbshP4IM1O0R68BLKmc&callback=initMap&libraries=places&language=pt-BR">
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
-   <!-- Script do mapa -->
-   <script src="../JS/mapa.js"></script>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-</main>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sobre nós</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="nossa_historia.html">Nossa História</a></li>
+              <li><a class="dropdown-item" href="inspiracao.html">Inspiração</a></li>
+              <li><a class="dropdown-item" href="destaques.html">Destaques</a></li>
+            </ul>
+          </li>
+        </ul>
 
+        <form class="d-flex ms-4" id="search-form">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar (ex: restaurant, hotel, supermarket)"
+            id="search-input">
+          <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
-<footer>
-  <div class="footer-container">
+  <main>
+    <br>
+    <br>
+    <h1> Pesquisa o estabelicimento com acessibilidade desejado no botão Pesquisar logo acima e a localização aparecerá no mapa, rápido e fácil! </h1><color: #ffffff;
+    font-weight: 500;></color:>
+    <br>
+    <br>
 
-    <div class="footer-links">
+    <div id="map"></div>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0fhgvL_bukX-pcbshP4IM1O0R68BLKmc&callback=initMap&libraries=places&language=pt-BR">
+      </script>
+
+    <!-- Script do mapa -->
+    <script src="../JS/mapa.js"></script>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
 
       <!-- BLOCO 2 - EMAIL/GITHUB -->
-    <div class="footer-links">
-      <h5> Contatos </h5>
-      <br>
-      <br>
-      <br>
-
-      <a href="mailto:sonimaridosreis@gmail.com">
-        <img src="../IMG/emailpreto.png" width="40px" height="40px" alt="email"> Sonimaridosreis@gmail.com</a>
-
-      <a href="https://github.com/sonimari" target="_blank">
-        <img src="../IMG/github.png" width="40px" height="40px"> GitHub Sonimári</a>
-
-      <a href="https://www.linkedin.com/in/sonim%C3%A1ri-reis-20aa1a326" target="_blank">
-        <img src="../IMG/linkedinpreto.png" width="40px" height="40px"> Sonimári Souza Dos Reis </a>
-    </div>
-
-    <!-- BLOCO 3 - COPYRIGHT -->
-    <div class="copy">
-      <h5>Obrigado por ter visitado o nosso site ♡</h5>
-      <br>
-      <br>
-      <br>
-
-      <div class="copy-marcas">
-        <img src="../IMG/Senac.png">
-        <img src="../IMG/Sucesu.png">
+      <div class="footer-links">
+        <h5> Contatos </h5>
         <br>
         <br>
         <br>
+
+        <a href="mailto:sonimaridosreis@gmail.com">
+          <img src="../IMG/emailpreto.png" width="40px" height="40px" alt="email"> Sonimaridosreis@gmail.com</a>
+
+        <a href="https://github.com/sonimari" target="_blank">
+          <img src="../IMG/github.png" width="40px" height="40px"> GitHub Sonimári</a>
+
+        <a href="https://www.linkedin.com/in/sonim%C3%A1ri-reis-20aa1a326" target="_blank">
+          <img src="../IMG/linkedinpreto.png" width="40px" height="40px"> Sonimári Souza Dos Reis </a>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <p>Copyright ©2025 | Todos os direitos reservados.</p>
-    </div>
-</footer>
+
+      <!-- BLOCO 3 - COPYRIGHT -->
+      <div class="copy">
+        <h5>Obrigado por ter visitado o nosso site ♡</h5>
+        <br>
+        <div class="copy-marcas">
+          <img src="../IMG/Senac.png">
+          <img src="../IMG/Sucesu.png">
+          <br>
+        </div>
+        <br>
+        <br>
+        <p> Copyright ©2025 | Todos os direitos reservados Sonimári Reis. </p>
+      </div>
+  </footer>
 
 
 
-<script src="../JS/acessibilidade.js">
+  <script src="../JS/acessibilidade.js">
 
-</script>
+  </script>
 
 </html>
