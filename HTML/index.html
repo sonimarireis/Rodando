@@ -6,15 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
-
   <!--CSS-->
   <link rel="stylesheet" type="text/css" href="../CSS/style_index.css">
-
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- VLibras -->
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../JS/mapa.js"></script>
 
   <title>Rodando por aí</title>
 
@@ -41,25 +43,17 @@
     }
   </style>
 
-<header>
-  <div class="header-container">
-    <img src="../IMG/logo.png" alt="Logo" class="logo">
+  <header>
+    <div class="header-container">
+      <img src="../IMG/logo.png" alt="Logo" class="logo">
 
-    <div id="acessibilidade">
-      <button class="btn btn-primary" id="diminuir" aria-label="Diminuir fonte">A-</button>
-      <button class="btn btn-primary" id="aumentar" aria-label="Aumentar fonte">A+</button>
+      <div id="acessibilidade">
+        <button class="btn btn-primary" id="diminuir" aria-label="Diminuir fonte">A-</button>
+        <button class="btn btn-primary" id="aumentar" aria-label="Aumentar fonte">A+</button>
+      </div>
     </div>
-  </div>
 
-  <!-- VLibras pode continuar aqui -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-</header>
-
+    <!-- VLibras pode continuar aqui -->
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>
@@ -68,7 +62,7 @@
     </div>
   </header>
 
-  <script>
+    <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
@@ -103,19 +97,16 @@
   <main>
     <br>
     <br>
-    <h1> Pesquisa o estabelicimento com acessibilidade desejado no botão Pesquisar logo acima e a localização aparecerá no mapa, rápido e fácil! </h1><color: #ffffff;
-    font-weight: 500;></color:>
-    <br>
-    <br>
+    <h1 class="texto-h1">
+  Pesquise o estabelecimento com acessibilidade desejado no botão 
+  <strong>Pesquisar</strong> logo acima e a localização aparecerá no mapa, rápido e fácil!
+</h1>
 
-    <div id="map"></div>
+      <div id="map"></div>
 
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0fhgvL_bukX-pcbshP4IM1O0R68BLKmc&callback=initMap&libraries=places&language=pt-BR">
-      </script>
-
-    <!-- Script do mapa -->
-    <script src="../JS/mapa.js"></script>
+      
+      <!-- Script do mapa -->
+      <script src="../JS/mapa.js"></script>
 
   </main>
 

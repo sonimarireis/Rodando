@@ -1,65 +1,72 @@
-let map;
-let markers = [];
+// Variáveis globais
 
+// Função para inicializar o mapa
 function initMap() {
-    const portoAlegre = { lat: -30.0346, lng: -51.2177 };
+    // Coordenadas de Porto Alegre
+    const portoAlegre = [-30.0346, -51.2177];
 
-    map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
-        center: portoAlegre,
-    });
+    // Criando o mapa dentro da div #map
+    map = L.map('map').setView(portoAlegre, 13);
 
-    new google.maps.Marker({
-        position: portoAlegre,
-        map: map,
-        title: "Porto Alegre - RS",
-    });
+    // Adiciona os tiles do OpenStreetMap (mapa base)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
+    // Captura o submit do formulário de pesquisa
     const form = document.getElementById("search-form");
     form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        const query = document.getElementById("search-input").value;
-        searchPlaces(query);
+        e.preventDefault(); // evita recarregar a página
+        const query = document.getElementById("search-input").value.trim();
+        if (query) searchPlaces(query);
+        else alert("Digite algo para pesquisar!");
     });
 }
 
-function searchPlaces(query) {
-    markers.forEach(marker => marker.setMap(null));
+// Função para buscar locais acessíveis usando Overpass API
+function searchPlaces(userQuery) {
+    // Remove marcadores antigos
+    markers.forEach(marker => map.removeLayer(marker));
     markers = [];
 
-    const service = new google.maps.places.PlacesService(map);
+    // Query da Overpass API para restaurantes acessíveis em Porto Alegre
+    // Aqui, você pode adicionar filtros extras, por exemplo por nome
+    const overpassQuery = `
+        [out:json][timeout:25];
+        area["name"="Porto Alegre"]->.searchArea;
+        node["amenity"="restaurant"]["wheelchair"="yes"](area.searchArea);
+        out body;
+    `;
 
-    const request = {
-        location: map.getCenter(),
-        radius: 5000,
-        keyword: query,
-    };
+    const url = "https://overpass-api.de/api/interpreter?data=" + encodeURIComponent(overpassQuery);
 
-    service.nearbySearch(request, function(results, status) {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            results.forEach(place => {
-                const marker = new google.maps.Marker({
-                    map: map,
-                    position: place.geometry.location,
-                    title: place.name,
-                });
+    // Faz a requisição à API
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (!data.elements || data.elements.length === 0) {
+                alert("Nenhum restaurante acessível encontrado.");
+                return;
+            }
 
-                const infowindow = new google.maps.InfoWindow({
-                    content: `<strong>${place.name}</strong><br>${place.vicinity || ""}`,
-                });
-
-                marker.addListener("click", () => {
-                    infowindow.open(map, marker);
-                });
-
+            // Cria marcadores para cada local encontrado
+            data.elements.forEach(place => {
+                // Cria o marcador no mapa
+                const marker = L.marker([place.lat, place.lon])
+                    .addTo(map)
+                    .bindPopup(`<strong>${place.tags.name || "Sem nome"}</strong>`); // Pop-up ao clicar
                 markers.push(marker);
             });
 
-            const bounds = new google.maps.LatLngBounds();
-            markers.forEach(marker => bounds.extend(marker.getPosition()));
-            map.fitBounds(bounds);
-        } else {
-            alert("Nenhum local encontrado ou erro na pesquisa.");
-        }
-    });
+            // Ajusta o mapa para mostrar todos os marcadores
+            const group = new L.featureGroup(markers);
+            map.fitBounds(group.getBounds());
+        })
+        .catch(err => {
+            console.error("Erro ao buscar locais:", err);
+            alert("Erro ao buscar os locais. Tente novamente.");
+        });
 }
+
+// Inicializa o mapa quando a página carregar
+window.onload = initMap;
